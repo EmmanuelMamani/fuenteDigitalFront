@@ -1,17 +1,17 @@
 <template>
   <div class="grid grid-cols-1 md:grid-cols-3 gap-6 p-6 bg-white rounded-lg shadow-lg">
     
-    <div class="space-y-4">
+    <div class="space-y-2  md:space-y-4">
 
-      <div class="flex items-center space-x-2 text-base text-sky-700">
+      <div class="flex items-center space-x-2  text-xs md:text-base text-sky-700">
         <Icon name="ic:outline-access-time" class="text-lg" />
         <NuxtTime :datetime="props.post.created_at" relative />
       </div>
 
-      <div class="font-bold text-3xl text-slate-800 tracking-tight">
+      <div class="font-bold text-base md:text-3xl text-slate-800 tracking-tight">
         {{ props.post.title }}
       </div>
-      <div class="text-slate-600 text-lg mt-2 line-clamp-4" v-html="props.post.description"></div>
+      <div class="text-slate-600 text-sm md:text-lg mt-2 line-clamp-4" v-html="props.post.description"></div>
 
       <div class="flex justify-end">
         <NuxtLink :to="`/post/${props.post.id}`">

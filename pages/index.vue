@@ -1,8 +1,8 @@
 <template>
     <div>
-        <PostMain v-if="posts.length>0" :post="posts[0]" class="w-2/3 mx-auto mt-3" ></PostMain>
+        <PostMain v-if="posts.length>0" :post="posts[0]" class="w-11/12 md:w-4/5 mx-auto mt-3" ></PostMain>
 
-        <div class="grid grid-cols-4 w-2/3 gap-4 mt-2 mx-auto" v-if="posts.length > 1">
+        <div class="grid grid-cols-2 md:grid-cols-4 w-11/12 md:w-4/5 gap-2 md:gap-4 mt-2 mx-auto" v-if="posts.length > 1">
             <div v-for="post in posts.slice(1)" :key="post.id" class="flex flex-col h-full">
                 <Post :post="post" class="flex-1" />
             </div>
