@@ -6,22 +6,22 @@
             text-color="#fff"
             mode="horizontal"
             active-text-color="#eab308"
-            class="flex justify-between !w-2/3 !mx-auto"
+            class="flex justify-between !w-full md:!w-2/3 !mx-auto"
         >
             <el-menu-item index="1" key="`menuitem-0`">
-                <NuxtLink :to="`/`">Novedades</NuxtLink>
+                <NuxtLink :to="`/`" class="!text-xs md:text-base">Novedades</NuxtLink>
             </el-menu-item>
 
             <template v-for="(section, index) in sections">
                 <el-sub-menu   v-if="section.subsections && section.subsections.length > 0"   :index="(index + 2).toString()" :key="`submenu-${index}`" >
                     <template #title>{{ section.name }}</template>
                     <el-menu-item   v-for="(sub, subIndex) in section.subsections"  :key="`subitem-${index}-${subIndex}`" :index="`${index + 2}-${subIndex + 1}`">
-                        <NuxtLink :to="`/section/${sub.id}`">{{ sub.name }}</NuxtLink>
+                        <NuxtLink :to="`/section/${sub.id}`" class="!text-xs md:text-base">{{ sub.name }}</NuxtLink>
                     </el-menu-item>
                 </el-sub-menu>
 
                 <el-menu-item  v-else  :index="(index + 2).toString()" :key="`menuitem-${index}`">
-                    <NuxtLink :to="`/section/${section.id}`">{{ section.name }}</NuxtLink>
+                    <NuxtLink :to="`/section/${section.id}`" class="!text-xs md:text-base">{{ section.name }}</NuxtLink>
                 </el-menu-item>
             </template>
 
