@@ -7,7 +7,8 @@ export default defineNuxtConfig({
     "@nuxtjs/tailwindcss",
     "nuxt-marquee",
     "nuxt-swiper",
-    "@nuxt/icon"
+    "@nuxt/icon",
+    "nuxt-time"
   ],
   runtimeConfig: {
       public: {

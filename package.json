@@ -17,6 +17,7 @@
     "nuxt": "^3.12.4",
     "nuxt-marquee": "^1.0.4",
     "nuxt-swiper": "^1.2.2",
+    "nuxt-time": "^1.0.3",
     "vue": "latest"
   },
   "devDependencies": {
